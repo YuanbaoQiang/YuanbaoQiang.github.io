@@ -22,18 +22,25 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="[Hexo]配置Valine评论功能ValineLeancloud+Valine打造Hexo个人博客极简评论系统 GitalkHexo中Gitalk配置使用教程-可能是目前最详细的教程 Hexo Next主题中集成gitalk评论系统 [Hexo使用Gitalk设置评论区](">
+  <meta name="description" content="[Hexo]配置Valine评论功能 Valine是一款基于LeanCloud的评论系统，无需自建后端,支持Markdown语法。  Step 1. LeanClound配置 Valine是基于LeanCloud作为数据存储的，目前需要实名认证。  创建应用 新建Class～&#x2F;存储&#x2F;结构化数据&#x2F;，新建Class：Comment和Counter，评论的文本数据会存储在Class中。 以下的两条评论是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Hexo]配置Valine功能">
 <meta property="og:url" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="This is Yuanbao&#39;s blog">
-<meta property="og:description" content="[Hexo]配置Valine评论功能ValineLeancloud+Valine打造Hexo个人博客极简评论系统 GitalkHexo中Gitalk配置使用教程-可能是目前最详细的教程 Hexo Next主题中集成gitalk评论系统 [Hexo使用Gitalk设置评论区](">
+<meta property="og:description" content="[Hexo]配置Valine评论功能 Valine是一款基于LeanCloud的评论系统，无需自建后端,支持Markdown语法。  Step 1. LeanClound配置 Valine是基于LeanCloud作为数据存储的，目前需要实名认证。  创建应用 新建Class～&#x2F;存储&#x2F;结构化数据&#x2F;，新建Class：Comment和Counter，评论的文本数据会存储在Class中。 以下的两条评论是">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png">
 <meta property="article:published_time" content="2020-07-11T08:19:00.000Z">
-<meta property="article:modified_time" content="2020-07-11T08:19:51.431Z">
+<meta property="article:modified_time" content="2020-07-11T09:39:04.306Z">
 <meta property="article:author" content="Yuanbao Qiang">
 <meta property="article:tag" content="评论">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/">
 
@@ -188,7 +195,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-11 04:19:00 / Modified: 04:19:51" itemprop="dateCreated datePublished" datetime="2020-07-11T04:19:00-04:00">2020-07-11</time>
+              <time title="Created: 2020-07-11 04:19:00 / Modified: 05:39:04" itemprop="dateCreated datePublished" datetime="2020-07-11T04:19:00-04:00">2020-07-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,10 +232,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Hexo-配置Valine评论功能"><a href="#Hexo-配置Valine评论功能" class="headerlink" title="[Hexo]配置Valine评论功能"></a>[Hexo]配置Valine评论功能</h1><h3 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h3><p><a href="https://www.cnblogs.com/Timesi/p/9556236.html" target="_blank" rel="noopener">Leancloud+Valine打造Hexo个人博客极简评论系统</a></p>
-<h3 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h3><p><a href="[https://iochen.com/2018/01/06/use-gitalk-in-hexo/#%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE](https://iochen.com/2018/01/06/use-gitalk-in-hexo/#进行配置)">Hexo中Gitalk配置使用教程-可能是目前最详细的教程</a></p>
-<p><a href="https://blog.csdn.net/tyt_XiaoTao/article/details/85572930?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight" target="_blank" rel="noopener">Hexo Next主题中集成gitalk评论系统</a></p>
-<p>[Hexo使用Gitalk设置评论区](</p>
+        <h1 id="Hexo-配置Valine评论功能"><a href="#Hexo-配置Valine评论功能" class="headerlink" title="[Hexo]配置Valine评论功能"></a>[Hexo]配置Valine评论功能</h1><blockquote>
+<p>Valine是一款基于LeanCloud的评论系统，无需自建后端,支持<font color="red">Markdown</font>语法。</p>
+</blockquote>
+<h2 id="Step-1-LeanClound配置"><a href="#Step-1-LeanClound配置" class="headerlink" title="Step 1. LeanClound配置"></a>Step 1. LeanClound配置</h2><blockquote>
+<p>Valine是基于<a href="https://www.leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>作为数据存储的，目前需要实名认证。</p>
+</blockquote>
+<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png" alt="新建应用"></p>
+<h3 id="新建Class"><a href="#新建Class" class="headerlink" title="新建Class"></a>新建Class</h3><p>～/存储/结构化数据/，新建Class：Comment和Counter，评论的文本数据会存储在Class中。</p>
+<p>以下的两条评论是我给博客配置好评论区所做的测试。</p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png" alt="leancloud配置"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png" alt="评论"></p>
+<h3 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h3><p>～/设置/安全中心/，只打开数据存储，Web安全域名就写自己的blog域名就行。</p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png" alt="安全设置"></p>
+<h3 id="应用keys"><a href="#应用keys" class="headerlink" title="应用keys"></a>应用keys</h3><p>～/设置/应用/，页面所示的AppID和AppKey是之后需要的内容。</p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png" alt="key"></p>
+<h2 id="Step-2-Next主题文件配置"><a href="#Step-2-Next主题文件配置" class="headerlink" title="Step 2. Next主题文件配置"></a>Step 2. Next主题文件配置</h2><h3 id="获取最新的-valine-min-js文件的地址"><a href="#获取最新的-valine-min-js文件的地址" class="headerlink" title="获取最新的 valine.min.js文件的地址"></a>获取最新的 valine.min.js文件的地址</h3><p>点击<a href="https://www.jsdelivr.com/package/npm/valine" target="_blank" rel="noopener">Valine</a> ，找到最新版本的valine.min.js，然后<code>Copy URL</code>。</p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png" alt="valine"></p>
+<h3 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h3><p>修改Next（选定主题）下的<code>_config.yml</code>。</p>
+<h4 id="粘贴valine链接"><a href="#粘贴valine链接" class="headerlink" title="粘贴valine链接"></a>粘贴valine链接</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"> <span class="comment"># valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js</span></span><br><span class="line"> <span class="comment"># valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js</span></span><br><span class="line"> valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js</span><br></pre></td></tr></table></figure>
+
+<h4 id="激活valine及其他配置"><a href="#激活valine及其他配置" class="headerlink" title="激活valine及其他配置"></a>激活valine及其他配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid:  <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  appkey: <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  notify: <span class="literal">false</span> <span class="comment"># Mail notifier</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: Just go go <span class="comment"># Comment box placeholder</span></span><br><span class="line">  avatar: mm <span class="comment"># Gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># Custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># Pagination size</span></span><br><span class="line">  language: <span class="comment"># Language, available values: en, zh-cn</span></span><br><span class="line">  visitor: <span class="literal">false</span> <span class="comment"># Article reading statistic</span></span><br><span class="line">  comment_count: <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  recordIP: <span class="literal">false</span> <span class="comment"># Whether to record the commenter IP</span></span><br><span class="line">  serverURLs: <span class="comment"># When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span></span><br><span class="line">  <span class="comment">#post_meta_order: 0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-3-测试"><a href="#Step-3-测试" class="headerlink" title="Step 3. 测试"></a>Step 3. 测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>进入博客帖子进行测试，手机也可进行评论。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://valine.js.org/avatar.html" target="_blank" rel="noopener">Valine头像配置</a></p>
+<p><a href="https://blog.csdn.net/Damon___/article/details/79122064?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight" target="_blank" rel="noopener">Hexo 关闭文章评论</a></p>
+<p><a href="https://www.jianshu.com/p/14afe3b97006" target="_blank" rel="noopener">Valine：一款基于Leancloud的无后端评论系统</a></p>
+<p><a href="https://www.cnblogs.com/Timesi/p/9556236.html" target="_blank" rel="noopener">Leancloud+Valine打造Hexo个人博客极简评论系统</a></p>
+<p><a href="https://www.jianshu.com/p/f4658df66a15" target="_blank" rel="noopener">Hexo博客使用valine评论系统无效果及终极解决方案</a></p>
 
     </div>
 
@@ -311,7 +344,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-配置Valine评论功能"><span class="nav-number">1.</span> <span class="nav-text">[Hexo]配置Valine评论功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Valine"><span class="nav-number">1.0.1.</span> <span class="nav-text">Valine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gitalk"><span class="nav-number">1.0.2.</span> <span class="nav-text">Gitalk</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-配置Valine评论功能"><span class="nav-number">1.</span> <span class="nav-text">[Hexo]配置Valine评论功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-1-LeanClound配置"><span class="nav-number">1.1.</span> <span class="nav-text">Step 1. LeanClound配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建应用"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建Class"><span class="nav-number">1.1.2.</span> <span class="nav-text">新建Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全设置"><span class="nav-number">1.1.3.</span> <span class="nav-text">安全设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用keys"><span class="nav-number">1.1.4.</span> <span class="nav-text">应用keys</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-2-Next主题文件配置"><span class="nav-number">1.2.</span> <span class="nav-text">Step 2. Next主题文件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取最新的-valine-min-js文件的地址"><span class="nav-number">1.2.1.</span> <span class="nav-text">获取最新的 valine.min.js文件的地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-config-yml文件"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置_config.yml文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#粘贴valine链接"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">粘贴valine链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激活valine及其他配置"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">激活valine及其他配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-3-测试"><span class="nav-number">1.3.</span> <span class="nav-text">Step 3. 测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.4.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
