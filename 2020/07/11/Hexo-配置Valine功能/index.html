@@ -29,18 +29,18 @@
 <meta property="og:site_name" content="This is Yuanbao&#39;s blog">
 <meta property="og:description" content="[Hexo]配置Valine评论功能 Valine是一款基于LeanCloud的评论系统，无需自建后端,支持Markdown语法。  Step 1. LeanClound配置 Valine是基于LeanCloud作为数据存储的，目前需要实名认证。  创建应用 新建Class～&#x2F;存储&#x2F;结构化数据&#x2F;，新建Class：Comment和Counter，评论的文本数据会存储在Class中。 以下的两条评论是">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png">
 <meta property="article:published_time" content="2020-07-11T08:19:00.000Z">
-<meta property="article:modified_time" content="2020-07-11T09:39:04.306Z">
+<meta property="article:modified_time" content="2020-07-11T09:45:17.150Z">
 <meta property="article:author" content="Yuanbao Qiang">
 <meta property="article:tag" content="评论">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/">
 
@@ -195,7 +195,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-11 04:19:00 / Modified: 05:39:04" itemprop="dateCreated datePublished" datetime="2020-07-11T04:19:00-04:00">2020-07-11</time>
+              <time title="Created: 2020-07-11 04:19:00 / Modified: 05:45:17" itemprop="dateCreated datePublished" datetime="2020-07-11T04:19:00-04:00">2020-07-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -238,17 +238,17 @@
 <h2 id="Step-1-LeanClound配置"><a href="#Step-1-LeanClound配置" class="headerlink" title="Step 1. LeanClound配置"></a>Step 1. LeanClound配置</h2><blockquote>
 <p>Valine是基于<a href="https://www.leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>作为数据存储的，目前需要实名认证。</p>
 </blockquote>
-<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png" alt="新建应用"></p>
+<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E6%96%B0%E5%BB%BA%E5%BA%94%E7%94%A8.png" alt="新建应用"></p>
 <h3 id="新建Class"><a href="#新建Class" class="headerlink" title="新建Class"></a>新建Class</h3><p>～/存储/结构化数据/，新建Class：Comment和Counter，评论的文本数据会存储在Class中。</p>
 <p>以下的两条评论是我给博客配置好评论区所做的测试。</p>
-<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png" alt="leancloud配置"></p>
-<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png" alt="评论"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/leancloud%E9%85%8D%E7%BD%AE.png" alt="leancloud配置"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E8%AF%84%E8%AE%BA.png" alt="评论"></p>
 <h3 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h3><p>～/设置/安全中心/，只打开数据存储，Web安全域名就写自己的blog域名就行。</p>
-<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png" alt="安全设置"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png" alt="安全设置"></p>
 <h3 id="应用keys"><a href="#应用keys" class="headerlink" title="应用keys"></a>应用keys</h3><p>～/设置/应用/，页面所示的AppID和AppKey是之后需要的内容。</p>
-<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png" alt="key"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/key.png" alt="key"></p>
 <h2 id="Step-2-Next主题文件配置"><a href="#Step-2-Next主题文件配置" class="headerlink" title="Step 2. Next主题文件配置"></a>Step 2. Next主题文件配置</h2><h3 id="获取最新的-valine-min-js文件的地址"><a href="#获取最新的-valine-min-js文件的地址" class="headerlink" title="获取最新的 valine.min.js文件的地址"></a>获取最新的 valine.min.js文件的地址</h3><p>点击<a href="https://www.jsdelivr.com/package/npm/valine" target="_blank" rel="noopener">Valine</a> ，找到最新版本的valine.min.js，然后<code>Copy URL</code>。</p>
-<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/yuanbaoqiang/Documents/myblog/source/_posts/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png" alt="valine"></p>
+<p><img src="/2020/07/11/Hexo-%E9%85%8D%E7%BD%AEValine%E5%8A%9F%E8%83%BD/valine.png" alt="valine"></p>
 <h3 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h3><p>修改Next（选定主题）下的<code>_config.yml</code>。</p>
 <h4 id="粘贴valine链接"><a href="#粘贴valine链接" class="headerlink" title="粘贴valine链接"></a>粘贴valine链接</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"> <span class="comment"># valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js</span></span><br><span class="line"> <span class="comment"># valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js</span></span><br><span class="line"> valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js</span><br></pre></td></tr></table></figure>
 
