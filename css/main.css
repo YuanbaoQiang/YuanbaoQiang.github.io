@@ -1330,7 +1330,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3ff;
+  background: #6eb511;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2739,7 +2739,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/bj03.jpg");
+  background: url("/images/wallhaven-oxrq99.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -2788,8 +2788,19 @@ body {
 a,
 span.exturl {
   border-bottom: 1px solid #464141;
-  color: #dc9090;
+  color: #a6c6ef;
 }
 .v[data-class=v] .txt-right {
   text-align: center;
+}
+.site-author-name {
+  color: #fff;
+}
+.menu-item-active a,
+.menu .menu-item a:hover,
+.menu .menu-item span.exturl:hover {
+  background: #7b5773;
+}
+.main-menu .menu-item-active a::after {
+  background: #9ade93;
 }
