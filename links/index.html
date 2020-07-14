@@ -205,9 +205,6 @@
     <div id="links">
         <style>
 
-            #links{
-               margin-top: 5rem;
-            }
 
             .links-content{
                 margin-top:1rem;
@@ -220,7 +217,7 @@
             }
 
             .card {
-                width: 400px;
+                width: 45%;
                 font-size: 1rem;
                 padding: 10px 20px;
                 border-radius: 4px;
@@ -228,6 +225,14 @@
                 margin-bottom: 1rem;
                 display:flex;
             }
+
+
+	    @media(max-width: 1400px){
+                .card {
+                    width: 89.5% !important;
+                }
+            }
+
             .card:nth-child(odd) {
                 float: left;
             }
@@ -252,7 +257,7 @@
             .card .card-header {
                 font-style: italic;
                 overflow: hidden;
-                width: 236px;
+                width: 100%;
             }
             .card .card-header a {
                 font-style: normal;
@@ -273,8 +278,12 @@
                 overflow: hidden;
                 white-space: nowrap;
             }
-	    
-	    span.focus-links {
+
+
+
+
+
+            span.focus-links {
                 font-style: normal;
                 margin-left: 10px;
                 position: unset;
@@ -291,6 +300,29 @@
             }
             span.focus-links:hover{
                 background-color: #318024;
+            }
+
+            .friends-btn{
+                text-align: center;
+                color: #555!important;
+                background-color: #fff;
+                border-radius: 3px;
+                font-size: 15px;
+                box-shadow: inset 0 0 10px 0 rgba(0,0,0,.35);
+                border: none!important;
+                transition-property: unset;
+                padding: 0 15px;
+                margin: inherit;
+            }
+
+            .friends-btn:hover{
+                color: rgb(255, 255, 255) !important;
+                border-radius: 3px;
+                font-size: 15px;
+                box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+                background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
+                margin: inherit;
+                }
             }
 
 
@@ -359,7 +391,7 @@
                         </div>
                     </div>
 
-                
+                    
 
                     <div class="card">
                         <img class="ava" src="https://yuanbaoqiang.github.io/images/wgz.jpg"/>
@@ -369,7 +401,7 @@
                         </div>
                     </div>
 
-                
+                    
 
                     <div class="card">
                         <img class="ava" src="https://yuanbaoqiang.github.io/images/w.jpg"/>
@@ -379,7 +411,7 @@
                         </div>
                     </div>
 
-                
+                    
 
                     <div class="card">
                         <img class="ava" src="https://yuanbaoqiang.github.io/images/zj.jpg"/>
@@ -389,7 +421,7 @@
                         </div>
                     </div>
 
-                
+                    
 
                     <div class="card">
                         <img class="ava" src="https://yuanbaoqiang.github.io/images/zwq.jpg"/>
@@ -399,7 +431,7 @@
                         </div>
                     </div>
 
-                
+                    
 
                     <div class="card">
                         <img class="ava" src="https://yuanbaoqiang.github.io/images/cw.jpg"/>
@@ -409,7 +441,7 @@
                         </div>
                     </div>
 
-                
+                    
 
             </div>
 
