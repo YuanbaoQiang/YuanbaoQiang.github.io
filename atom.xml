@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-12T06:23:26.517Z</updated>
+  <updated>2020-07-12T02:23:37.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,25 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/07/12/hello-world/"/>
-    <id>http://yoursite.com/2020/07/12/hello-world/</id>
-    <published>2020-07-12T06:23:26.517Z</published>
-    <updated>2020-07-12T06:23:26.517Z</updated>
-    
-    <summary type="html">
-    
-      这是显示在首页的概述，正文内容均会被隐藏。
-    
-    </summary>
-    
-    <content src="http://yoursite.com/https://yuanbaoqiang.github.io/images/hello.jpg" type="image" />
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hexo 主页显示博文部分内容</title>
@@ -111,17 +92,13 @@
     <link href="http://yoursite.com/2020/04/16/latex-learning/"/>
     <id>http://yoursite.com/2020/04/16/latex-learning/</id>
     <published>2020-04-16T06:07:56.000Z</published>
-    <updated>2020-07-12T02:22:46.605Z</updated>
+    <updated>2020-07-14T08:56:50.218Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;/2020/04/16/latex-learning/yuanbaoqiang/Documents/myblog/source/_posts/latex-learning/hello.jpg&quot; alt=&quot;hello&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Why-LaTex&quot;&gt;&lt;a href=&quot;#Why-LaTex&quot; class=&quot;headerlink&quot; title=&quot;Why LaTex&quot;&gt;&lt;/a&gt;Why LaTex&lt;/h1&gt;&lt;p&gt;Just because I like something new, I like challenges, and also not afraid of  trouble. Windows, a system most people use, while has been replaced with Linux platform by me few days ago. At least I feel pretty better now~ &lt;/p&gt;
+&lt;p&gt;Word, a component of Microsoft Office, like win, has been packaged well. Until I met LATEX, also a new Editing method for me, and a new idea appeared: I want to try. In fact, I did learn a lot about typography from it, which you can’t feel with word. I hope i can use it to complete my first paper.&lt;/p&gt;
     
     </summary>
     
