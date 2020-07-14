@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-14T09:23:01.440Z</updated>
+  <updated>2020-07-14T14:03:39.613Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 添加代码块Mac Panel特效</title>
+    <link href="http://yoursite.com/2020/07/14/Hexo-Mac-Highlight/"/>
+    <id>http://yoursite.com/2020/07/14/Hexo-Mac-Highlight/</id>
+    <published>2020-07-14T13:24:37.000Z</published>
+    <updated>2020-07-14T14:03:39.613Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引入JS&quot;&gt;&lt;a href=&quot;#引入JS&quot; class=&quot;headerlink&quot; title=&quot;引入JS&quot;&gt;&lt;/a&gt;引入JS&lt;/h1&gt;&lt;p&gt;在&lt;code&gt;~/themes/next/scripts/&lt;/code&gt;下分别创建&lt;code&gt;events.js&lt;/code&gt;和&lt;code&gt;codeblock.js&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;events-js&quot;&gt;&lt;a href=&quot;#events-js&quot; class=&quot;headerlink&quot; title=&quot;events.js&quot;&gt;&lt;/a&gt;events.js&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// mac Panel效果代码块相关&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; exec = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;child_process&#39;&lt;/span&gt;).exec;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// new 后自动打开编辑器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo.on(&lt;span class=&quot;string&quot;&gt;&#39;new&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  exec(&lt;span class=&quot;string&quot;&gt;&#39;open -a MacDown &#39;&lt;/span&gt; + data.path);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo 美化" scheme="http://yoursite.com/categories/Hexo-%E7%BE%8E%E5%8C%96/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 主页显示博文部分内容</title>
