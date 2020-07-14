@@ -1264,7 +1264,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #65c83c;
+  background: #6782c3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2710,10 +2710,6 @@ body {
 .comments {
   border-radius: 20px;
   background: rgba(8,23,42,0.46);
-}
-.sidebar {
-  position: absolute;
-  left: 13.5%;
 }
 .posts-expand .post-title-link {
   color: #fff;
