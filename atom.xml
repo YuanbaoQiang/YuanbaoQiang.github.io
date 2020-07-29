@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-29T13:50:53.383Z</updated>
+  <updated>2020-07-29T14:34:30.510Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>LeetCode-斐波那契数列</title>
+    <title>LeetCode-斐波那契数列（递归、动态规划）</title>
     <link href="http://yoursite.com/2020/07/29/LeetCode-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
     <id>http://yoursite.com/2020/07/29/LeetCode-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</id>
     <published>2020-07-29T12:15:11.000Z</published>
-    <updated>2020-07-29T13:50:53.383Z</updated>
+    <updated>2020-07-29T14:34:30.510Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200729222236.png&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
@@ -40,6 +34,10 @@
     
     
       <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="动态规划" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="递归" scheme="http://yoursite.com/tags/%E9%80%92%E5%BD%92/"/>
     
   </entry>
   
