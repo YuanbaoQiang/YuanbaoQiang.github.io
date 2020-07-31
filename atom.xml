@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-30T13:45:49.898Z</updated>
+  <updated>2020-07-31T00:49:52.139Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode-两数之和（哈希映射）</title>
+    <link href="http://yoursite.com/2020/07/31/LeetCode-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+    <id>http://yoursite.com/2020/07/31/LeetCode-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
+    <published>2020-07-31T00:28:22.000Z</published>
+    <updated>2020-07-31T00:49:52.139Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="哈希映射" scheme="http://yoursite.com/tags/%E5%93%88%E5%B8%8C%E6%98%A0%E5%B0%84/"/>
+    
+  </entry>
   
   <entry>
     <title>Java基础11（继承、多态）</title>
@@ -42,7 +71,7 @@
     <link href="http://yoursite.com/2020/07/29/LeetCode-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
     <id>http://yoursite.com/2020/07/29/LeetCode-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</id>
     <published>2020-07-29T12:15:11.000Z</published>
-    <updated>2020-07-29T14:34:30.510Z</updated>
+    <updated>2020-07-31T00:40:50.885Z</updated>
     
     <summary type="html">
     
@@ -421,29 +450,6 @@
     
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>I am a newcomer here</title>
-    <link href="http://yoursite.com/2020/04/16/latex-learning/"/>
-    <id>http://yoursite.com/2020/04/16/latex-learning/</id>
-    <published>2020-04-15T18:07:56.000Z</published>
-    <updated>2020-07-14T09:13:15.733Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/2020/04/16/latex-learning/Latex_Logo.png&quot; alt=&quot;Latex_Logo&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Why-LaTex&quot;&gt;&lt;a href=&quot;#Why-LaTex&quot; class=&quot;headerlink&quot; title=&quot;Why LaTex&quot;&gt;&lt;/a&gt;Why LaTex&lt;/h1&gt;&lt;p&gt;Just because I like something new, I like challenges, and also not afraid of  trouble. Windows, a system most people use, while has been replaced with Linux platform by me few days ago. At least I feel pretty better now~ &lt;/p&gt;
-&lt;p&gt;Word, a component of Microsoft Office, like win, has been packaged well. Until I met LATEX, also a new Editing method for me, and a new idea appeared: I want to try. In fact, I did learn a lot about typography from it, which you can’t feel with word. I hope i can use it to complete my first paper.&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LaTeX 学习记录" scheme="http://yoursite.com/categories/LaTeX-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    
-    
-      <category term="LaTex" scheme="http://yoursite.com/tags/LaTex/"/>
     
   </entry>
   
