@@ -1330,7 +1330,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #913614;
+  background: #b9ff30;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2746,7 +2746,7 @@ mjx-container + br {
   }
 }
 body {
-  background: url("/images/bj.jpg");
+  background: url("/images/wallhaven-oxrq99.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
