@@ -267,17 +267,24 @@
 <p>Next默认是会显示全文的，这样显然很不方便，因此需要一些方法去只显示前面一部分。</p>
 </blockquote>
 <a id="more"></a>
+
 <h1 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h1><p>Next主题的_config.yml文件找到如下：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line">excerpt_description: <span class="literal">true</span></span><br></pre></td></tr></table></figure></div>
+
 <blockquote>
 <p>默认为打开状态</p>
 </blockquote>
 <h1 id="方法一：添加Description"><a href="#方法一：添加Description" class="headerlink" title="方法一：添加Description"></a>方法一：添加Description</h1><p>对博文的<code>front-matter</code>进行<code>Description</code>描述，之后该博文在主页中只显示Description内容。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="MARKDOWN"><figure class="iseeu highlight /markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: #标题</span><br><span class="line">date: #博文的创建时间</span><br><span class="line">description: #本博文的描述</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+
+
+
 <h1 id="方法二：设置截断点"><a href="#方法二：设置截断点" class="headerlink" title="方法二：设置截断点"></a>方法二：设置截断点</h1><p>在需要显示的内容后插入代码：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="MARKDOWN"><figure class="iseeu highlight /markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是博文在主页上显示的内容</span><br><span class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span></span><br><span class="line">这是点击readmore之后显示的内容</span><br></pre></td></tr></table></figure></div>
+
 <h1 id="方法三：自动截断"><a href="#方法三：自动截断" class="headerlink" title="方法三：自动截断"></a>方法三：自动截断</h1><p>打开 themes/ 目录下的对应的主题的theme文件夹下的 <code>_config.yml</code> 文件，找到这段代码，如果没有则新建，可能不同的主题会不支持这种方法：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically Excerpt. Not recommend.</span></span><br><span class="line"><span class="comment"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span></span><br><span class="line">  auto_excerpt:</span><br><span class="line">	<span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">    length: 150</span><br></pre></td></tr></table></figure></div>
+
 <blockquote>
 <p>我的Next主题是没有成功。</p>
 </blockquote>
@@ -385,7 +392,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -452,12 +459,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">71k</span>
+    <span title="Symbols count total">74k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:05</span>
+    <span title="Reading time total">1:08</span>
 </div>
 
 
