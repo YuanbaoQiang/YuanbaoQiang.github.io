@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-21T08:05:16.167Z</updated>
+  <updated>2020-08-21T12:10:14.936Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-反转单链表（头插法、双指针、辅助栈）</title>
+    <link href="http://yoursite.com/2020/08/21/LeetCode-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8%EF%BC%88%E5%8D%95%E9%93%BE%E8%A1%A8%EF%BC%89/"/>
+    <id>http://yoursite.com/2020/08/21/LeetCode-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8%EF%BC%88%E5%8D%95%E9%93%BE%E8%A1%A8%EF%BC%89/</id>
+    <published>2020-08-21T08:09:01.000Z</published>
+    <updated>2020-08-21T12:10:14.936Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200821200147.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="单链表" scheme="http://yoursite.com/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="指针" scheme="http://yoursite.com/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="栈" scheme="http://yoursite.com/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-删除链表中的节点</title>
     <link href="http://yoursite.com/2020/08/21/LeetCode-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/"/>
     <id>http://yoursite.com/2020/08/21/LeetCode-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</id>
     <published>2020-08-21T07:04:00.000Z</published>
-    <updated>2020-08-21T08:05:16.167Z</updated>
+    <updated>2020-08-21T11:58:19.854Z</updated>
     
     <summary type="html">
     
@@ -36,6 +63,8 @@
       <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
     
       <category term="单链表" scheme="http://yoursite.com/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="指针" scheme="http://yoursite.com/tags/%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
@@ -444,7 +473,7 @@
     
     <summary type="html">
     
-      &lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200728090806.png&quot; style=&quot;zoom: 33%;&quot;&gt;
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200728090806.png&quot; style=&quot;zoom: 33%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -453,27 +482,6 @@
     
     
       <category term="Software" scheme="http://yoursite.com/tags/Software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java基础10（封装、构造器）</title>
-    <link href="http://yoursite.com/2020/07/28/Java%E5%9F%BA%E7%A1%8010/"/>
-    <id>http://yoursite.com/2020/07/28/Java%E5%9F%BA%E7%A1%8010/</id>
-    <published>2020-07-27T23:24:23.000Z</published>
-    <updated>2020-07-30T13:48:48.047Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200728084607.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java基础" scheme="http://yoursite.com/categories/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   

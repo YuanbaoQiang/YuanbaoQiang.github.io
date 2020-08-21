@@ -264,7 +264,6 @@
       
         <p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200730213721.png" alt></p>
 <a id="more"></a>
-
 <h1 id="继承（inheritance）"><a href="#继承（inheritance）" class="headerlink" title="继承（inheritance）"></a>继承（inheritance）</h1><p>继承的基本思想是，可以基于已知的类创建新的类。继承已经存在的类就是复用（继承）这些类的方法，同时也可以增加一些新的方法和字段，使得新类能够适应新类的情况。</p>
 <blockquote>
 <p>被继承方：超类(superclass)，基类(baseclass)，父类(parent class)</p>
@@ -272,7 +271,6 @@
 </blockquote>
 <h2 id="定义子类"><a href="#定义子类" class="headerlink" title="定义子类"></a>定义子类</h2><p>用关键字<code>extends</code>进行继承操作，存在继承者和被继承者是<code>is-a</code>的关系，通常子类会拥有比超类更多的功能！</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="comment">// added methods and fiels</span></span><br><span class="line">    <span class="keyword">private</span> String major;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h2 id="重写或者覆盖-override-方法"><a href="#重写或者覆盖-override-方法" class="headerlink" title="重写或者覆盖(override)方法"></a>重写或者覆盖(override)方法</h2><h3 id="super"><a href="#super" class="headerlink" title="super"></a>super</h3><blockquote>
 <ol>
 <li>super可以调用超类中的属性和方法（”super.属性”，”super.方法”）</li>
@@ -294,12 +292,9 @@
 <h1 id="多态（polymorphism）"><a href="#多态（polymorphism）" class="headerlink" title="多态（polymorphism）"></a>多态（polymorphism）</h1><p>多态使用的前提：要有继承关系，要有方法的重写</p>
 <p><code>is-a</code>原则的另一种表述：替换原则（substitution principle），例如可以将子类对象赋予给超类变量，子类的么一个对象也是超类的对象:</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Employee e;</span><br><span class="line">e = <span class="keyword">new</span> employee(...);</span><br><span class="line">e = <span class="keyword">new</span> Manager(...);</span><br></pre></td></tr></table></figure></div>
-
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Manager boss = <span class="keyword">new</span> Manager(...);</span><br><span class="line">Employee[] staff = <span class="keyword">new</span> Employee[<span class="number">3</span>];</span><br><span class="line">Staff[<span class="number">0</span>] = boss;</span><br></pre></td></tr></table></figure></div>
-
 <p>变量stuff[0]和boss引用同一个对象，但是编译器只将stuff[0]看成是一个Employee对象，</p>
-<p><font color="orange">调用的是超类中的方法或者子类中重写的方法！！！！！！！！！</font></p>
-
+<font color="orange">调用的是超类中的方法或者子类中重写的方法！！！！！！！！！</font>
     </div>
 
     
@@ -400,7 +395,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -413,7 +408,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -467,12 +462,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">84k</span>
+    <span title="Symbols count total">86k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:16</span>
+    <span title="Reading time total">1:18</span>
 </div>
 
 
@@ -559,8 +554,8 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
 
