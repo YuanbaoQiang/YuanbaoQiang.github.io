@@ -269,18 +269,22 @@
       
         <p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200803202115.png" alt></p>
 <a id="more"></a>
+
 <h1 id="递归——迭代是人，递归是神🙆‍♂️"><a href="#递归——迭代是人，递归是神🙆‍♂️" class="headerlink" title="递归——迭代是人，递归是神🙆‍♂️"></a>递归——迭代是人，递归是神🙆‍♂️</h1><blockquote>
-<p>To Iterate is Human, to Recurse, Divine. ——— L. Peter Deutsch</p>
+<p>To Iterate is Human, to Recurse, Divine. —— L. Peter Deutsch</p>
 </blockquote>
 <p>递归是指在函数的定义中使用函数自身的方法，递归一定要向已知方向递归，否则这种递归就变成了无穷递归，类似于死循环。</p>
 <p>目前刚接触递归，但是已经感觉它的难度了…后续持续补充相关算法，加深理解😜。</p>
 <h2 id="1-n之和"><a href="#1-n之和" class="headerlink" title="1-n之和"></a>1-n之和</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 1-n 之和</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: YuanbaoQiang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/7/26 20:02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: int</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n + getSum(n-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 <h2 id="n！"><a href="#n！" class="headerlink" title="n！"></a>n！</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getProduct</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n * getProduct(n-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 <h2 id="斐波那契数列（Fibonacci-sequence）"><a href="#斐波那契数列（Fibonacci-sequence）" class="headerlink" title="斐波那契数列（Fibonacci sequence）"></a>斐波那契数列（Fibonacci sequence）</h2><blockquote>
-<p>表达式：F<em>(1)=1，</em>F(2)=1, <em>F</em>(n)=<em>F</em>(n - 1)+<em>F</em>(n - 2)（<em>n</em> ≥ 3，<em>n</em> ∈ N*）</p>
+<p>表达式：F<em>(1)=1，*F(2)=1, *F</em>(n)=<em>F</em>(n - 1)+<em>F</em>(n - 2)（<em>n</em> ≥ 3，<em>n</em> ∈ N*）</p>
 <p>0、1、1、2、3、5、8、13、21、34、……</p>
 </blockquote>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 斐波那契数列：1、1、2、3、5、8、13、21、34、……</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: YuanbaoQiang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/7/26 20:15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: int</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getFibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span> )&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getFibonacci(n-<span class="number">1</span>) + getFibonacci(n-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 <h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><blockquote>
 <p>有三根杆子A，B，C。A杆上有 N 个 (N&gt;1) 穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至 C 杆：</p>
 <ol>
@@ -299,9 +303,9 @@
 <h3 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h3><blockquote>
 <p>其实整个过程主要是三个主要流程:</p>
 <ol>
-<li>将n-1个圆盘从A转移到B；（A—&gt;B）</li>
-<li>将最大的圆盘从A转移到C；（A—&gt;C）</li>
-<li>此时的B上的n-1个圆盘和初始状态的A是一样的，再次进行1-2步骤。（B—&gt;C）</li>
+<li>将n-1个圆盘从A转移到B；（A–&gt;B）</li>
+<li>将最大的圆盘从A转移到C；（A–&gt;C）</li>
+<li>此时的B上的n-1个圆盘和初始状态的A是一样的，再次进行1-2步骤。（B–&gt;C）</li>
 </ol>
 </blockquote>
 <p>例如以下的<a href="https://blog.csdn.net/qq_37873310/article/details/80461767" target="_blank" rel="noopener">例子</a>，可以将63个圆盘堪称一个整体，依次类推。</p>
@@ -408,7 +412,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -475,12 +479,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">86k</span>
+    <span title="Symbols count total">87k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:18</span>
+    <span title="Reading time total">1:19</span>
 </div>
 
 
@@ -567,8 +571,8 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>
 

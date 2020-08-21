@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-21T12:10:14.936Z</updated>
+  <updated>2020-08-21T13:01:57.156Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode-从尾到头打印单链表</title>
+    <link href="http://yoursite.com/2020/08/21/LeetCode-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2020/08/21/LeetCode-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E5%8D%95%E9%93%BE%E8%A1%A8/</id>
+    <published>2020-08-21T12:51:31.000Z</published>
+    <updated>2020-08-21T13:01:57.156Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="单链表" scheme="http://yoursite.com/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="指针" scheme="http://yoursite.com/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="栈" scheme="http://yoursite.com/tags/%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode-反转单链表（头插法、双指针、辅助栈）</title>
@@ -461,27 +494,6 @@
       <category term="递归" scheme="http://yoursite.com/tags/%E9%80%92%E5%BD%92/"/>
     
       <category term="斐波那契数列" scheme="http://yoursite.com/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA使用（持续更新...）</title>
-    <link href="http://yoursite.com/2020/07/28/idea%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/07/28/idea%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-07-28T00:46:56.000Z</published>
-    <updated>2020-07-28T01:19:39.045Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200728090806.png&quot; style=&quot;zoom: 33%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="IntelliJ IDEA" scheme="http://yoursite.com/categories/IntelliJ-IDEA/"/>
-    
-    
-      <category term="Software" scheme="http://yoursite.com/tags/Software/"/>
     
   </entry>
   
