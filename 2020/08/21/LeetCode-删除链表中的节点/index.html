@@ -261,16 +261,21 @@
       
         <p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200821151143.png" alt></p>
 <a id="more"></a>
+
 <h1 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h1><p>给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。返回删除后的链表的头节点。</p>
 <blockquote>
 <p>输入: head = [4,5,1,9], val = 5<br>输出: [4,1,9]<br>解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</p>
+</blockquote>
+<blockquote>
 <p>输入: head = [4,5,1,9], val = 1<br>输出: [4,5,9]<br>解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.</p>
 </blockquote>
 <p>题目来源：<a href="https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/" target="_blank" rel="noopener">剑指 Offer 18. 删除链表的节点</a></p>
 <h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><p>单链表中删除一个节点，无非就是让待删除的节点的<font color="orange" size="5">前一个节点指向目标节点的后一个节点</font>。遍历单链表是要注意记录目标节点的前一个节点即可。在这点上单指针和双指针达到的效果是一致的。</p>
 <h2 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteNode</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        ListNode cur;</span><br><span class="line">        <span class="keyword">for</span>(cur = head; cur.next != <span class="keyword">null</span>;cur = cur.next)&#123;</span><br><span class="line">            <span class="comment">//cur指针指向head，如果待删除的节点为head节点，则头节点往后移，并返回head</span></span><br><span class="line">            <span class="keyword">if</span>(cur.val == val)&#123;</span><br><span class="line">                head = cur.next;</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//cur指针后移，如果遇到符合条件的节点，</span></span><br><span class="line">            <span class="comment">// 则将cur的next指向待删除节点的后一个节点</span></span><br><span class="line">            <span class="keyword">if</span>(cur.next.val == val)&#123;</span><br><span class="line">                cur.next = cur.next.next;</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 <h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200821160445.png" alt="image-20200821155905642"></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteNode</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// head为null，返回null</span></span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">// head为要删除的节点，返回head.next</span></span><br><span class="line">        <span class="keyword">if</span>(head.val == val) <span class="keyword">return</span> head.next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义两个指针 cur 和 pre</span></span><br><span class="line">        <span class="comment">// cur --&gt; 当前节点</span></span><br><span class="line">        <span class="comment">// pre --&gt; 当前节点的前一个节点</span></span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode pre = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;</span><br><span class="line">            pre = cur; <span class="comment">// 将cur节点赋值给pre节点</span></span><br><span class="line">            cur = cur.next; <span class="comment">// cur节点后移</span></span><br><span class="line">            <span class="keyword">if</span>(cur.val == val)&#123; <span class="comment">// cur节点的值为所要删除的节点值</span></span><br><span class="line">                pre.next = cur.next;</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 
     </div>
 
@@ -374,20 +379,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -441,12 +446,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">88k</span>
+    <span title="Symbols count total">107k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:20</span>
+    <span title="Reading time total">1:37</span>
 </div>
 
 
