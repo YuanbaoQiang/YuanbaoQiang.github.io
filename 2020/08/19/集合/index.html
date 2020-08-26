@@ -82,8 +82,8 @@
 
   <script type="text/javascript" src="/js/src/clicklove.js"></script>
    <!--pjax：防止跳转页面音乐暂停-->
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-<link rel="alternate" href="/atom.xml" title="YuanbaoQiang" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="YuanbaoQiang" type="application/atom+xml">
 </head>
 
 
@@ -264,12 +264,12 @@
       
         <p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200820180514.png" alt></p>
 <a id="more"></a>
-
 <blockquote>
 <p>图片来源于：<a href="https://www.cnblogs.com/nayitian/p/3266090.html" target="_blank" rel="noopener">Java：集合，Collection接口框架图</a></p>
 </blockquote>
 <p>Java集合大致可分为Set、List和Map三种体系，其中Set代表无序、不可重复的集合；List代表有序、重复的集合；而Map则代表具有映射关系的集合。Java 5之后，增加了Queue体系集合，代表一种队列集合实现。Java集合框架主要由Collection和Map两个根接口及其子接口、实现类组成。本文仅探讨Collection接口的常用抽象方法，以及List和Set实现接口。</p>
-<h1 id="Collection接口抽象方法"><a href="#Collection接口抽象方法" class="headerlink" title="Collection接口抽象方法"></a>Collection接口抽象方法</h1><table>
+<h1 id="Collection接口抽象方法"><a href="#Collection接口抽象方法" class="headerlink" title="Collection接口抽象方法"></a>Collection接口抽象方法</h1><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>返回值</th>
@@ -277,7 +277,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>boolean</code></td>
 <td><code>add(E e)</code></td>
 <td>添加元素</td>
@@ -352,9 +353,10 @@
 <td><code>toArray(T[] a)</code></td>
 <td>返回一个包含此集合中所有元素的数组； 返回数组的运行时类型是指定数组的运行时类型。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">Collection</span>&lt;<span class="title">E</span>&gt;</span>&#123;&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h2 id="List-java"><a href="#List-java" class="headerlink" title="List.java"></a>List.java</h2><blockquote>
 <p>An <strong><font color="red" size="5">ordered </font></strong> collection (also known as a <i>sequence</i>).  The user of this interface has precise control over where in the list each element is inserted.  The user can access elements by their <strong><font color="red" size="5">integer index (position in the list)</font></strong>, and search for elements in the list. Unlike sets, lists typically <strong><font color="red" size="5">allow duplicate elements</font></strong>. More formally, lists typically allow pairs of elements {@code e1} and {@code e2} such that {@code e1.equals(e2)}, and they typically allow <strong><font color="red" size="5">multiple null elements if they allow null elements</font></strong> at all…</p>
 </blockquote>
@@ -369,20 +371,12 @@
 </blockquote>
 <p>LinkedList允许所有类型元素的插入，<font color="orange" size="5">线程不安全</font>的，内部声明了Node类型的first和last属性，默认值为null，使用双向链表存储。对于频繁的插入、删除等操作此类效率比ArrayList高。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">    E item;</span><br><span class="line">    LinkedList.Node&lt;E&gt; next;</span><br><span class="line">    LinkedList.Node&lt;E&gt; prev;</span><br><span class="line"></span><br><span class="line">    Node(LinkedList.Node&lt;E&gt; prev, E element, LinkedList.Node&lt;E&gt; next) &#123;</span><br><span class="line">        <span class="keyword">this</span>.item = element;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">        <span class="keyword">this</span>.prev = prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="Vector-java（-since-1-0）"><a href="#Vector-java（-since-1-0）" class="headerlink" title="Vector.java（@since   1.0）"></a>Vector.java（@since   1.0）</h3><p>此类方法与ArrayList相似，但是它是<font color="green" size="5">线程安全</font>的，因此效率较低。</p>
 <h2 id="List遍历"><a href="#List遍历" class="headerlink" title="List遍历"></a>List遍历</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ArrayList list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">    list.add(<span class="number">123</span>);</span><br><span class="line">    list.add(<span class="number">456</span>);</span><br><span class="line">    list.add(<span class="number">456</span>);</span><br><span class="line">    list.add(<span class="string">"AA"</span>);</span><br><span class="line">    list.add(<span class="keyword">new</span> Person(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式一：Iterator</span></span><br><span class="line">Iterator iterator = list.iterator();</span><br><span class="line"><span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">    System.out.println(iterator.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式三：for循环</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++)&#123;</span><br><span class="line">    System.out.print(list.get(i) + <span class="string">"\t"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="foreach（增强for）循环"><a href="#foreach（增强for）循环" class="headerlink" title="foreach（增强for）循环"></a>foreach（增强for）循环</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(Object obj : list)&#123;</span><br><span class="line">    System.out.printf(<span class="string">"list[%s] = %s\t"</span>, count++, obj);<span class="comment">// 格式化输出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-
-
 <h1 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Set</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">Collection</span>&lt;<span class="title">E</span>&gt; </span>&#123;&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h2 id="Set-java"><a href="#Set-java" class="headerlink" title="Set.java"></a>Set.java</h2><blockquote>
 <p>A collection that contains <strong><font color="red" size="5">no duplicate elements</font></strong>.  More formally, sets contain no pair of elements {@code e1} and {@code e2} such that {@code e1.equals(e2)}, and <strong><font color="red" size="5">at most one null element</font></strong>…</p>
 </blockquote>
@@ -398,7 +392,6 @@
 <p>HashSet使用的是相当复杂的方式来存储元素的，使用HashSet能够最快的获取集合中的元素，效率非常高（以空间换时间）。添加元素时，先计算元素的哈希值（hashCode），无重复哈希值则添加成功。若出现相同哈希值，则通过equals方法来判断添加元素与已有元素是否为相同，HashSet的底层为数组+链表的方式。HashSet是<font color="orange" size="5">线程不安全</font>的</p>
 <p><strong>遍历输出无序，根据哈希值决定。</strong></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Set set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    <span class="comment">// Set set = new LinkedHashSet();</span></span><br><span class="line">    set.add(<span class="number">123</span>);</span><br><span class="line">    set.add(<span class="number">123</span>);</span><br><span class="line">    set.add(<span class="string">"AA"</span>);</span><br><span class="line">    set.add(<span class="string">"CC"</span>);</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">    set.add(<span class="number">129</span>);</span><br><span class="line">    set.add(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按照元素计算得到的哈希值输出</span></span><br><span class="line">    System.out.println(set); <span class="comment">// [AA, CC, null, 129, 123, User&#123;name='Tom', age=12&#125;]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h4 id="LinkedHashSet-java"><a href="#LinkedHashSet-java" class="headerlink" title="LinkedHashSet.java"></a>LinkedHashSet.java</h4><blockquote>
 <p><strong><font color="red" size="5">Hash table</font></strong> and <strong><font color="red" size="5">linked list</font></strong> implementation of the {@code Set} interface, with predictable iteration order.  This implementation differs from {@code HashSet} in that it maintains a  <strong><font color="red" size="5">doubly-linked list</font></strong> running through all of its entries.  This linked list defines the iteration ordering, which is the order in which elements were inserted into the set (<i>insertion-order</i>).  Note that insertion order is <i>not</i> affected if an element is <i>re-inserted</i> into the set.  (An element {@code e} is reinserted into a set {@code s} if {@code s.add(e)} is invoked when {@code s.contains(e)} would return {@code true} immediately prior to the invocation.)…</p>
 <p>Note that this implementation is <strong><font color="red" size="5">not synchronized</font></strong>…</p>
@@ -407,30 +400,27 @@
 <p>对于比较频繁的遍历操作，LinkedHashSet效率高于HashSet，LinkedHashSet是<font color="orange" size="5">线程不安全</font>的</p>
 <p><strong>遍历输出有序，根据添加顺序</strong></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Set set = <span class="keyword">new</span> LinkedHashSet();</span><br><span class="line">    set.add(<span class="number">123</span>);</span><br><span class="line">    set.add(<span class="number">123</span>);</span><br><span class="line">    set.add(<span class="string">"AA"</span>);</span><br><span class="line">    set.add(<span class="string">"CC"</span>);</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">    set.add(<span class="number">129</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按照添加顺序输出</span></span><br><span class="line">    System.out.println(set); <span class="comment">// [123, AA, CC, User&#123;name='Tom', age=12&#125;, 129]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="TreeSet-java（-since-1-2）"><a href="#TreeSet-java（-since-1-2）" class="headerlink" title="TreeSet.java（@since   1.2）"></a>TreeSet.java（@since   1.2）</h3><blockquote>
 <p>A {@link NavigableSet} implementation based on a {@link TreeMap}. The elements are ordered using their <strong><font color="red" size="5">{@linkplain Comparable natural ordering}</font></strong>, or by a <strong><font color="red" size="5">{@link Comparator}</font></strong> provided at set creation time, depending on which constructor is used…Note that this implementation is <strong><font color="red" size="5">not synchronized</font></strong>.</p>
 </blockquote>
 <p>TreeSet是SortedSet接口的唯一实现，可以确保集合元素处于排序状态。TreeSet支持两种排序方式：<font color="orange" size="5">自然排序</font>和<font color="orange" size="5">定制排序</font>，默认情况下采用<strong>自然排序</strong>，同时TreeSet是<font color="orange" size="5">线程不安全</font>的</p>
 <p>不可以添加不同类的对象！！无法进行自然排序！！</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    TreeSet set = <span class="keyword">new</span> TreeSet();</span><br><span class="line">    <span class="comment">// 失败：不能添加不同类的对象</span></span><br><span class="line">    set.add(<span class="number">123</span>);</span><br><span class="line">    set.add(<span class="number">456</span>);</span><br><span class="line">    set.add(<span class="string">"AA"</span>);</span><br><span class="line">    System.out.println(set);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <h4 id="自然排序"><a href="#自然排序" class="headerlink" title="自然排序"></a>自然排序</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    TreeSet set = <span class="keyword">new</span> TreeSet();</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">12</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jerry"</span>,<span class="number">32</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jmy"</span>,<span class="number">3</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Mike"</span>,<span class="number">65</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jack"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jack"</span>,<span class="number">15</span>));</span><br><span class="line">    </span><br><span class="line">    Iterator iterator = set.iterator();</span><br><span class="line">    <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">        System.out.println(iterator.next());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按照姓名从大到小排序，年龄从小到大排列</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"调用User重写Comparable接口的compareTo方法"</span>);</span><br><span class="line">    <span class="keyword">if</span>(o <span class="keyword">instanceof</span> User)&#123;</span><br><span class="line">        User user = (User) o;</span><br><span class="line">        <span class="comment">// return this.name.compareTo(user.name);</span></span><br><span class="line">        <span class="keyword">int</span> compare = <span class="keyword">this</span>.name.compareTo(user.name);</span><br><span class="line">        <span class="keyword">if</span>(compare != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> compare;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Integer.compare(<span class="keyword">this</span>.age,user.age);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"输入的类型不匹配"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <p>输出结果</p>
 <blockquote>
 <p>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>调用User重写Comparable接口的compareTo方法<br>User{name=’Jack’, age=15}<br>User{name=’Jack’, age=33}<br>User{name=’Jerry’, age=32}<br>User{name=’Jmy’, age=3}<br>User{name=’Mike’, age=65}<br>User{name=’Tom’, age=12}</p>
 </blockquote>
 <h4 id="定制排序"><a href="#定制排序" class="headerlink" title="定制排序"></a>定制排序</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Comparator com = <span class="keyword">new</span> Comparator() &#123;</span><br><span class="line">        <span class="comment">// 按照年龄从小到大排列</span></span><br><span class="line">        <span class="comment">// 年龄相同的数据按照自然排序进行</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Object o1, Object o2)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(o1 <span class="keyword">instanceof</span> User &amp;&amp; o2 <span class="keyword">instanceof</span> User)&#123;</span><br><span class="line">                User user1 = (User) o1;</span><br><span class="line">                User user2 = (User) o2;</span><br><span class="line">                <span class="keyword">int</span> result;</span><br><span class="line">                result = user1.getAge() &gt; user2.getAge() ? <span class="number">1</span> : user1.getAge() == user2.getAge() ? <span class="number">0</span> : -<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(result == <span class="number">0</span>)&#123;</span><br><span class="line">                    result = user1.compareTo(user2);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> result;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"传入的数据类型不匹配"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    TreeSet set = <span class="keyword">new</span> TreeSet(com); <span class="comment">// 传入新建的Comparator对象</span></span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Tom"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jerry"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Marry"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jmy"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Mike"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jack"</span>,<span class="number">33</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> User(<span class="string">"Jack"</span>,<span class="number">34</span>));</span><br><span class="line">    </span><br><span class="line">    Iterator iterator = set.iterator();</span><br><span class="line">    <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">        System.out.println(iterator.next());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <p>输出结果</p>
 <blockquote>
 <p>User{name=’Tom’, age=20}<br>User{name=’Jack’, age=34}<br>User{name=’Jack’, age=43}<br>User{name=’Jerry’, age=45}<br>User{name=’Jmy’, age=45}<br>User{name=’Mike’, age=66}<br>User{name=’Marry’, age=78}</p>
 </blockquote>
-<p><font color="blue" size="5">Set接口遍历方式同List</font></p>
-<h1 id="List和Set接口的常用方法"><a href="#List和Set接口的常用方法" class="headerlink" title="List和Set接口的常用方法"></a>List和Set接口的常用方法</h1><table>
+<font color="blue" size="5">Set接口遍历方式同List</font>
+
+<h1 id="List和Set接口的常用方法"><a href="#List和Set接口的常用方法" class="headerlink" title="List和Set接口的常用方法"></a>List和Set接口的常用方法</h1><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>返回值</th>
@@ -438,7 +428,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>void</code></td>
 <td><code>add(int index, E element)</code></td>
 <td>指定索引处添加元素</td>
@@ -478,7 +469,9 @@
 <td><code>subList(int fromIndex,  int toIndex)</code></td>
 <td>返回从fromIndex到toIndex位置的子集合</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 
@@ -580,7 +573,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -647,12 +640,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">107k</span>
+    <span title="Symbols count total">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:41</span>
 </div>
 
 

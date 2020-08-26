@@ -83,8 +83,8 @@
 
   <script type="text/javascript" src="/js/src/clicklove.js"></script>
    <!--pjax：防止跳转页面音乐暂停-->
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-<link rel="alternate" href="/atom.xml" title="YuanbaoQiang" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="YuanbaoQiang" type="application/atom+xml">
 </head>
 
 
@@ -259,7 +259,6 @@
       
         <p><img src="https://cdn.jsdelivr.net/gh/YuanbaoQiang/PicGoBed/img/20200825211819.png" alt></p>
 <a id="more"></a>
-
 <h1 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h1><p>0,1,,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字。求出这个圆圈里剩下的最后一个数字。</p>
 <p>例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。</p>
 <blockquote>
@@ -280,19 +279,14 @@
 <p>这可以看成一个数学表达式$f(N,M)$，其中N为队列的人数，M为报数。</p>
 <p>则开始从幸存者开始逆推：</p>
 <p>$f(1,3)=0$;</p>
-<p> $f(2,3)=1$，此时队列有两个人，幸存者7整体向右位移3个单位： 1–&gt; 0 –&gt;1</p>
-<p>$f(3,3)=1$，此时队列有三个人，幸存者7整体向右位移3个单位：2 –&gt; 0 –&gt;1</p>
-<p>$f(4,3)=0$，此时队列有四个人，幸存者7整体向右位移3个单位：2 –&gt; 3 –&gt; 0</p>
-<p>$f(5,3)=3$，此时队列有五个人，幸存者7整体向右位移3个单位：1 –&gt; 2 –&gt; 3</p>
+<p> $f(2,3)=1$，此时队列有两个人，幸存者7整体向右位移3个单位： 1—&gt; 0 —&gt;1</p>
+<p>$f(3,3)=1$，此时队列有三个人，幸存者7整体向右位移3个单位：2 —&gt; 0 —&gt;1</p>
+<p>$f(4,3)=0$，此时队列有四个人，幸存者7整体向右位移3个单位：2 —&gt; 3 —&gt; 0</p>
+<p>$f(5,3)=3$，此时队列有五个人，幸存者7整体向右位移3个单位：1 —&gt; 2 —&gt; 3</p>
 <p>……</p>
 <p>从上面的逆推过程就可以看出，这次的索引位置为上一次的索引位置+3再取模！</p>
 <p>换成数学表达式就是$f(N,M)=(f(N-1),M)%N$，最后直接顺藤摸瓜，从最后一个幸存者入手，找到原索引。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lastRemaining</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 定义最后一个幸存者的位置，为0</span></span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 逆推过程</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n;i++)&#123;</span><br><span class="line">            p = (p + m) % (i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-
-
-
-
 
     </div>
 
@@ -395,7 +389,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -462,12 +456,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">107k</span>
+    <span title="Symbols count total">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:41</span>
 </div>
 
 
